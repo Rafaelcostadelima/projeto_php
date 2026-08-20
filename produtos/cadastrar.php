@@ -1,5 +1,4 @@
 <?php
-session_start();
-include 'conexao.php';
-include 'verifica_login.php';
+include __DIR__ . '/../conexao.php';
+include __DIR__ . '/verifica_login.php';
 ?>
