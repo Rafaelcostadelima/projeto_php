@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 30-Jul-2026 às 16:48
+-- Tempo de geração: 03-Set-2026 às 16:48
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.2
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `sistema_produtos`
 --
-CREATE DATABASE IF NOT EXISTS `sistema_produtos` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `sistema_produtos`;
 
 -- --------------------------------------------------------
 
@@ -36,6 +34,15 @@ CREATE TABLE `produtos` (
   `preco` decimal(10,2) NOT NULL,
   `quantidade` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `produtos`
+--
+
+INSERT INTO `produtos` (`id`, `nome`, `descricao`, `preco`, `quantidade`) VALUES
+(0, 'Caneta esferográfica', 'Caneta esferográfica azul da marca BIC, ponta de 1.0mm', '0.75', 50),
+(2, 'Monitor', 'Monitor 165hz 24 polegadas', '574.00', 1),
+(3, 'Quadrinhos do Smilingüido', 'Quadrinhos do Smilingüido, a formiguinha cristã.', '10.00', 30);
 
 -- --------------------------------------------------------
 
@@ -81,7 +88,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
