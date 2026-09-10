@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 03-Set-2026 às 16:48
+-- Tempo de geração: 10-Set-2026 às 16:40
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.2
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `sistema_produtos`
 --
+CREATE DATABASE IF NOT EXISTS `sistema_produtos` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `sistema_produtos`;
 
 -- --------------------------------------------------------
 
@@ -40,7 +42,7 @@ CREATE TABLE `produtos` (
 --
 
 INSERT INTO `produtos` (`id`, `nome`, `descricao`, `preco`, `quantidade`) VALUES
-(0, 'Caneta esferográfica', 'Caneta esferográfica azul da marca BIC, ponta de 1.0mm', '0.75', 50),
+(0, 'Caneta esferográfica', 'Caneta esferográfica azul da marca BIC, ponta de 1.0mm', '1.00', 50),
 (2, 'Monitor', 'Monitor 165hz 24 polegadas', '574.00', 1),
 (3, 'Quadrinhos do Smilingüido', 'Quadrinhos do Smilingüido, a formiguinha cristã.', '10.00', 30);
 
