@@ -10,6 +10,10 @@ $resultado = mysqli_query($conexao, $sql);
 <main class="container">
     <h2>Produtos cadastrados</h2>
     <div class="acoes-topo">
+        <?php if (isset($_SESSION['mensagem'])) { ?>
+        <p><?php echo $_SESSION['mensagem']; ?></p>
+        <?php unset($_SESSION['mensagem']); ?>
+        <?php } ?>
         <a class="produto-novo" href="cadastrar.php">Cadastrar novo produto</a>
     </div>
 
