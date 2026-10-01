@@ -225,3 +225,15 @@ table th {
     background-color: rgba(216, 1, 1, 0.753);
 
 }
+
+/* Aula 10 - ajuste de responsividade básica */
+@media (max-width: 600px) {
+    header nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    table, thead, tbody, th, td, tr {
+        font-size: 14px;
+    }
+}
