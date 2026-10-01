@@ -4,8 +4,8 @@ require __DIR__ . '/../conexao.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = $_POST['id'];
-    $nome = $_POST['nome'];
-    $descricao = $_POST['descricao'];
+    $nome = mysqli_real_escape_string($conexao, trim($_POST['nome']));
+    $descricao = mysqli_real_escape_string($conexao, trim($_POST['descricao']));
     $preco = $_POST['preco'];
     $quantidade = $_POST['quantidade'];
 
